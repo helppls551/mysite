@@ -7,7 +7,7 @@ from django.utils import  timezone
 class MyPublish(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=20)
-    photo = models.ImageField(upload_to='img/%Y/%m/%d')
+    #photo = models.ImageField(upload_to='img/%Y/%m/%d')
     publish_date = models.DateTimeField(blank=True,null=True)
     create_date = models.DateTimeField(default=timezone.now)
 
