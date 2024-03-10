@@ -21,7 +21,7 @@ from blog.views import pageNotFound
 
 urlpatterns = [
     path('admin/',admin.site.urls),
-    path('robot/', include('blog.urls')),
+    path('', include('blog.urls')),
 ]
 
 handler404 = pageNotFound
