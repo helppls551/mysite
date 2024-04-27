@@ -1,10 +1,14 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponseNotFound, HttpResponse, Http404
+from .models import MyPublish
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'blog/index.html')
+    posts = MyPublish.objects.all()
+    print(posts)
+    print('>>>')
+    return render(request, 'blog/index.html',{'posts': posts})
 
 
 def hi(request):

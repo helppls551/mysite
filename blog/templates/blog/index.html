@@ -1,10 +1,22 @@
 <!DOCTYPE html>
+{%  load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link   rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
 <body>
-    <h1>Hello</h1>
+    <div></div>
+    <ol>
+        {% for i in posts %}
+        <li>
+            <h1><a href="">{{i}}</a></h1>
+            <h2>{{i.publish_date}}</h2>
+            <hr>
+        </li>
+        {% endfor %}
+    </ol>
+    <div class="bottom"></div>
 </body>
 </html>
