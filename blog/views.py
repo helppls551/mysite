@@ -33,7 +33,7 @@ def categ(request, catid):
         return redirect('home')  # перенаправление
     if int(catid) == 600:
         return redirect('hi', permanent=True)
-    return HttpResponse(f"<h1>Page {catid}</h1>")
+    return HttpResponse(f"<h1>Page {catid}</h1>"    )
 
 
 def pageNotFound(request, exception):

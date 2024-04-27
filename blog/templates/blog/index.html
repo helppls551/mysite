@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-{%  load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link   rel="stylesheet" href="{% static 'css/style.css'%}">
-</head>
-<body>
-    <div></div>
-    <ol>
+{% extends 'blog/base.html' %}
+{% block content %}
         {% for i in posts %}
         <li>
             <h1><a href="">{{i}}</a></h1>
@@ -16,7 +7,4 @@
             <hr>
         </li>
         {% endfor %}
-    </ol>
-    <div class="bottom"></div>
-</body>
-</html>
+{% endblock %}
